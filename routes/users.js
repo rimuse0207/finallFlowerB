@@ -8,10 +8,10 @@ const requestUrl = `${HOST}?apiKey=20200206NNRF9K4P2NRBPWZJ2RC8GW&&numOfRows=217
 
 /* GET users listing. */
 router.get("/", async (req, res) => {
-  // res.header("Access-Control-Allow-Origin", "*");
-  // res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
-  // res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
-  // res.header("Access-Control-Allow-Credentials", true);
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
+  res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+  res.header("Access-Control-Allow-Credentials", true);
   try {
     let data = null;
     await request(
