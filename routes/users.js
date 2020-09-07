@@ -24,6 +24,7 @@ router.get("/", (req, res) => {
   // res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
   // res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
   // res.header("Access-Control-Allow-Credentials", true);
+  console.log(data);
 
   res.json({ data: data });
 });
