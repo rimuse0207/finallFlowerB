@@ -6,7 +6,7 @@ const parser = require("xml2json");
 const HOST = "http://api.nongsaro.go.kr/service/garden/gardenList";
 const requestUrl = `${HOST}?apiKey=20200206NNRF9K4P2NRBPWZJ2RC8GW&&numOfRows=127`;
 const HOST2 = "http://api.nongsaro.go.kr/service/garden/gardenDtl";
-const requestUrl2 = `${HOST2}?apiKey=${process.env.APIKEY}&&cntntsNo=`;
+const requestUrl2 = `${HOST2}?apiKey=20200206NNRF9K4P2NRBPWZJ2RC8GW&&numOfRows=127&&cntntsNo=`;
 let data = null;
 const datas = request(
   {
@@ -45,5 +45,8 @@ router.post("/qwe", async (req, res) => {
   } catch (err) {
     console.log("Detail error ", err);
   }
+});
+router.get(`/qwe`, (req, res) => {
+  res.json({ data: data3 });
 });
 module.exports = router;
