@@ -34,7 +34,7 @@ router.get("/readDiary", async (req, res, next) => {
         console.log("data read success");
       }
     }).sort({ _id: -1 });
-    res.json(diary);
+    res.json({ diaryData: diary });
     res.send();
   } catch (e) {
     console.error(error);
