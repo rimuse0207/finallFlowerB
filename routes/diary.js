@@ -44,6 +44,7 @@ router.get("/readDiary", async (req, res, next) => {
 
 router.post("/newDiary", upload.array("img", 12), async (req, res, next) => {
   const reqFiles = [];
+  console.log("client sned on serverData");
   for (var i = 0; i < req.files.length; i++) {
     reqFiles.push(req.files[i].filename);
   }
