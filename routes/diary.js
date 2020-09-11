@@ -50,6 +50,7 @@ router.post("/newDiary", upload.array("img", 12), async (req, res, next) => {
   }
 
   try {
+    console.log("asdasdasdasd");
     const diary = await User({
       useredName: req.body.useredName,
       imageFile: reqFiles,
