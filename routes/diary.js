@@ -61,6 +61,7 @@ router.post("/newDiary", upload.array("img", 12), async (req, res, next) => {
     diary.save();
     res.send({ sendCheck: true });
   } catch (e) {
+    console.log("diary store fail");
     console.error(error);
     next(error);
   }
