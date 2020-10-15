@@ -70,9 +70,10 @@ router.post("/newDiary", upload.array("img", 12), async (req, res, next) => {
 });
 
 router.post("/delete", async (req, res, next) => {
+  console.log("암ㄴㅇㄴ머엄니ㅏ어ㅣㅁ너이ㅏㄴㅁ",req.body);
   try {
     await User.deleteOne({
-      _id: req.body.id,
+      useredName: req.body.id,
     });
     res.send();
   } catch (e) {
